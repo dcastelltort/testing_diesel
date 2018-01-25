@@ -19,5 +19,8 @@ fn main() {
         println!("{}", post.title);
         println!("----------\n");
         println!("{}", post.body);
+        println!("----- debug output ---");
+        println!("{:?}", post);
+        println!("----------------------");
     }
 }
