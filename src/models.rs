@@ -1,14 +1,14 @@
 use super::schema::posts;
 use std::time::SystemTime;
 
-#[derive(Queryable)]
+#[derive(Queryable, Debug)]
 pub struct Post {
     pub id: i32,
     pub title: String,
     pub body: String,
     pub published: bool,
     pub publish_at: Option<SystemTime>,
-    pub visit_count: Option<i32>
+    pub visit_count: i32
 }
 
 #[derive(Insertable)]
