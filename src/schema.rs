@@ -4,7 +4,7 @@ table! {
         title -> Varchar,
         body -> Text,
         published -> Bool,
-        publish_at -> Nullable<Timestamp>,
+        publish_at -> Timestamp,
         visit_count -> Int4,
     }
 }

@@ -7,7 +7,7 @@ pub struct Post {
     pub title: String,
     pub body: String,
     pub published: bool,
-    pub publish_at: Option<SystemTime>,
+    pub publish_at: SystemTime,
     pub visit_count: i32
 }
 
