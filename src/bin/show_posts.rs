@@ -16,6 +16,11 @@ fn main() {
 
     println!("Displaying {} posts", results.len());
     for post in results {
+
+        //update visit count
+        diesel::update(&post).set(visit_count.eq(visit_count + 1)).execute(&connection).expect(&format!("failed updating visit count on post id {}", post.id));
+
+        //display it
         println!("{}", post.title);
         println!("----------\n");
         println!("{}", post.body);

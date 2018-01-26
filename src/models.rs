@@ -1,7 +1,7 @@
 use super::schema::posts;
 use std::time::SystemTime;
 
-#[derive(Queryable, Debug)]
+#[derive(Queryable, Identifiable, AsChangeset, Debug)]
 pub struct Post {
     pub id: i32,
     pub title: String,
